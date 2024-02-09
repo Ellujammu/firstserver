@@ -74,7 +74,6 @@ app.get('/info', (request, response) => {
                 name: person.name,
                 number: person.number,
             }
-
             persons = persons.concat(ihminen)
             return(response.json(ihminen))
         }
