@@ -4,6 +4,7 @@ var morgan = require('morgan')
 const app = express()
 app.use(express.json())
 app.use(cors())
+app.use(express.static('dist'))
 
 morgan.token('person', function (req) { return JSON.stringify({"name": req.body.name, "number": req.body.number})})
 
